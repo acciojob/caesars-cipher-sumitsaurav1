@@ -15,8 +15,11 @@ function rot13(encodedStr){
   // Only change code below this line
   for(let i=0;i<encodedStr.length;i++)
 	  {
-		  char cc = encodedStr.charAt(i);
-		  decodedArr.push(lookup.[cc]);
+		  let cc = encodedStr.charAt(i);
+		  if(cc!=" "){
+			  decodedArr.push(lookup.[cc]);
+		  }
+		  
 	  }
   return decodedArr;//return decodedArr
 }
